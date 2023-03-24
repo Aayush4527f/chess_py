@@ -76,7 +76,7 @@ def move_pieces(frm,to):
 
     # check if it's the turn of the piece on frm coord
     if turn == gs[x][y]['piece']['color']:
-        if gs[x][y]['piece']['name'] == 'k' and frm[0] - to[0] == 2 or frm[0] - to[0] == -2:
+        if gs[x][y]['piece']['name'] == 'k' and abs(frm[0] - to[0]) == 2:
             y_coord = frm[1]
             if to[0] == 2:
                 move_pieces([0,y_coord],[3,y_coord])
